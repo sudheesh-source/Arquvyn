@@ -541,31 +541,12 @@ body {
   flex-grow: 1;
 }
 
-.feature-header-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.65rem;
-}
-
 .feature-name {
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 600;
   color: var(--text);
-}
-
-.pill-tag {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 0.15rem 0.55rem;
-  border-radius: var(--radius-full);
-  background-color: var(--tag-bg);
-  color: var(--tag-text);
-  border: 1px solid var(--tag-border);
-  white-space: nowrap;
+  margin-bottom: 0.6rem;
 }
 
 .feature-text {

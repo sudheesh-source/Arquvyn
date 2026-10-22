@@ -104,4 +104,4 @@ Accept the defaults (root directory `./`, no build command).
 
 ## 📄 License & Credits
 
-&copy; 2026 arquvyn. All rights reserved. Platform under development.
+&copy; 2026 Karyoun Innovations Pvt Ltd. All rights reserved.
