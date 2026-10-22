@@ -7,11 +7,11 @@
 /* --- CSS Variables in :root (Single source of truth for all colors & logo effect) --- */
 :root {
   /* 1. Large Background Logo Watermark Configuration */
-  --bg-logo-size-desktop: 55vw;        /* Logo width on desktop (50-60vw) */
-  --bg-logo-size-mobile: 80vw;         /* Logo width on mobile (80vw) */
-  --bg-logo-max-width: 760px;          /* Maximum width constraint */
-  --bg-logo-start-opacity: 0.20;       /* Starting opacity (15-25% range) */
-  --bg-logo-travel-y: 120px;           /* Downward travel distance at 100% fade */
+  --bg-logo-size-desktop: 68vw;        /* Enlarged logo width on desktop */
+  --bg-logo-size-mobile: 92vw;         /* Enlarged logo width on mobile */
+  --bg-logo-max-width: 900px;          /* Maximum width constraint */
+  --bg-logo-start-opacity: 0.22;       /* Starting opacity (15-25% range) */
+  --bg-logo-travel-y: 130px;           /* Downward travel distance at 100% fade */
   --bg-logo-fade-vh: 100vh;            /* Viewport height to achieve 0 opacity */
 
   /* 2. Base Backgrounds */
@@ -154,6 +154,8 @@ body {
   mix-blend-mode: screen;
   user-select: none;
   -webkit-user-select: none;
+  -webkit-mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 35%, transparent 75%);
+  mask-image: radial-gradient(ellipse 65% 65% at 50% 50%, black 35%, transparent 75%);
 }
 
 .bg-logo-img {
@@ -226,7 +228,7 @@ body {
   -webkit-backdrop-filter: blur(16px);
   background-color: var(--bg-header);
   border-bottom: 1px solid var(--border-subtle);
-  padding: 0.85rem 0;
+  padding: 0.6rem 0;
 }
 
 .header-container {
@@ -239,37 +241,34 @@ body {
 .brand-logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
   text-decoration: none;
-  color: var(--text);
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: -0.01em;
-  transition: opacity var(--transition-fast);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 .brand-logo:hover {
-  opacity: 0.9;
+  opacity: 0.88;
+  transform: translateY(-1px);
 }
 
+
+
 .brand-logo-img {
-  height: 40px;
-  width: auto;
-  max-height: 44px;
-  object-fit: contain;
-  display: block;
+    height: 100px;
+    width: auto;
+    max-height: none;
+    object-fit: contain;
+    display: block;
+    mix-blend-mode: screen;
+    position: relative;
+    top: -8px;
 }
+
 
 @media (max-width: 640px) {
   .brand-logo-img {
-    height: 30px;
+    height: 40px;
+    max-height: 44px;
   }
-}
-
-.logo-text {
-  display: inline-block;
-  line-height: 1;
 }
 
 /* Header Navigation */

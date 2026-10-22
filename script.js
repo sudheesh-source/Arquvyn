@@ -9,8 +9,8 @@
  * Edit these constants or the corresponding CSS variables in style.css (:root)
  * ========================================================================= */
 const BG_LOGO_CONFIG = {
-  startOpacity: 0.20,       // Starting opacity when at top of page (15-25% range)
-  travelDistancePx: 120,    // Downward movement in px by the time fade completes
+  startOpacity: 0.22,       // Starting opacity when at top of page (15-25% range)
+  travelDistancePx: 130,    // Downward movement in px by the time fade completes
   fadeDistanceScreens: 1.0, // Scrolled viewport heights for full fade-out (1.0 = 100vh)
   easePower: 2.2            // Slight ease curve exponent (1 = linear, >1 = natural deceleration)
 };
